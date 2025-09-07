@@ -1,0 +1,57 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box;}
+body { font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; background: #111; color: #eee;}
+
+/* Navbar */
+.navbar{
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1rem 2rem;
+    background: #222;
+    position: fixed;
+    width: 100%;
+    top: 0;   
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.logo span { color: #00c6ff; }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+.nav-links a {
+    color: #eee;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00c6ff;
+}
+
+/* Hero Section */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+    text-align: center;
+    padding-top: 4rem;
+}
+.hero-text h2 {
+    font-size: 2.5rem;
+}
+.hero-text .highlight {
+    color: #00c6ff;
+}
+.hero-text h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: #aaa;
+}
