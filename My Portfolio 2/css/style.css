@@ -9,67 +9,98 @@ body {
     background: linear-gradient(-45deg, #1f1c2c, #928dab, #1f1c2c, #0f2027);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
-  }
-  
-  @keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
+    /* padding-top: 70px; */
+}
 
-  /* ------------------------------------------------------------------------------------- */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ------------------------------------------------------------------------------------- */
 
 
-  /* floating shapes-------------------------------------------- */
+/* floating shapes-------------------------------------------- */
 
-  .floating-shape {
+.floating-shape {
     position: absolute;
     width: 40px;
     height: 40px;
     background: rgba(0, 246, 255, 0.2);
     border-radius: 50%;
     animation: float 6s infinite ease-in-out;
-  }
-  
-  @keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-30px); }
-    100% { transform: translateY(0); }
-  }
-  
+}
 
-
-
-
-
-* { margin: 0; padding: 0; box-sizing: border-box;}
-body { 
-    font-family: "Nunito", sans-serif;
-     background: #111; 
-     color: #eee;
+@keyframes float {
+    0% {
+        transform: translateY(0);
     }
 
+    50% {
+        transform: translateY(-30px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    background: #111;
+    color: #eee;
+}
+
+
 /* Navbar */
-.navbar{
-    display: flex; justify-content: space-between; align-items: center;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem 2rem;
-    background: #222;
+    /* background: #222; */
     position: fixed;
     width: 100%;
-    top: 0;   
+    top: 0;
+    background: rgba(17, 17, 17, 0.6);
+    backdrop-filter: blur(8px);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 1000;
 }
 
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
 }
-.logo span { color: #00c6ff; }
+
+.logo span {
+    color: #00c6ff;
+}
 
 .nav-links {
     display: flex;
     list-style: none;
     gap: 2.5rem;
 }
+
 /* first update */
 /* .nav-links a {
     color: #eee;
@@ -84,14 +115,14 @@ body {
     text-decoration: none;
     padding: 5px 0;
   } */
-  /* third update */
-  .nav-links a {
+/* third update */
+.nav-links a {
     position: relative;
     padding: 6px 12px;
     transition: color 0.3s ease;
     color: white;
     text-decoration: none;
-  }
+}
 
 
 
@@ -109,8 +140,8 @@ body {
     background: #00c6ff;
     transition: width 0.3s ease;
   } */
-  /* second update */
-  .nav-links a::after {
+/* second update */
+.nav-links a::after {
     content: "";
     position: absolute;
     left: 0;
@@ -119,45 +150,49 @@ body {
     height: 2px;
     background: #00f6ff;
     transition: width 0.3s ease;
-  }
-  /* first update */
-  /* .nav-links a:hover::after {
+}
+
+/* first update */
+/* .nav-links a:hover::after {
     width: 100%;
   } */
-  /* second update */
-  .nav-links a:hover {
+/* second update */
+.nav-links a:hover {
     color: #04d4db;
-  }
- /* second update000000000 */
-  /* Highlight the active section link: */
-  /* .nav-links a.active {
+}
+
+/* second update000000000 */
+/* Highlight the active section link: */
+/* .nav-links a.active {
     color: #00c6ff;
     border-bottom: 2px solid #00c6ff;
   } */
 
-  /* third update */
+/* third update */
 
-  .nav-links a:hover::after,
-  .nav-links a.active::after {
+.nav-links a:hover::after,
+.nav-links a.active::after {
     width: 100%;
-  }
+}
 
 
-  /* ------------------------------------- */
-  /* Blinking cursor */
+/* ------------------------------------- */
+/* Blinking cursor */
 .cursor {
     display: inline-block;
     margin-left: 2px;
     color: #00f6ff;
     animation: blink 0.8s infinite;
-  }
-  
-  @keyframes blink {
-    50% { opacity: 0; }
-  }
+}
 
-  /* --------------------------------- */
-  
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* --------------------------------- */
+
 
 /* Hero Section */
 
@@ -170,17 +205,21 @@ body {
     text-align: center;
     padding-top: 4rem;
 }
+
 .hero-text h2 {
     font-size: 2.5rem;
 }
+
 .hero-text .highlight {
     color: #00c6ff;
 }
+
 .hero-text h3 {
     font-size: 1.5rem;
     margin: 1rem 0;
     color: #aaa;
 }
+
 .btn {
     display: inline-block;
     margin-top: 1rem;
@@ -192,13 +231,17 @@ body {
     border-radius: 25px;
     transition: 0.3s;
 }
+
 .btn:hover {
     background-color: #009ad9;
     color: #fff;
 }
+
 /* section */
 
-section {padding: 5rem 2rem;}
+section {
+    padding: 5rem 2rem;
+}
 
 /* Porjects */
 .project-grid {
@@ -214,28 +257,34 @@ section {padding: 5rem 2rem;}
     text-align: center;
     transition: transform 0.3s, background 0.3s;
 }
+
 .project-card:hover {
     transform: scale(1.05);
     background: #333;
 }
+
 .project-card img {
-    width: 50%; /* it could be 100% too*/
+    width: 50%;
+    /* it could be 100% too*/
     border-radius: 10px;
 }
 
 /* Skills */
 
 .skill-bars {
-    max-width: 600px;   
+    max-width: 600px;
     margin: auto;
 }
+
 .bar {
     margin: 1rem 0;
 }
+
 .bar span {
     display: block;
     margin-bottom: 0.5rem;
 }
+
 .progress {
     height: 10px;
     background: #333;
@@ -243,6 +292,7 @@ section {padding: 5rem 2rem;}
     overflow: hidden;
     position: relative;
 }
+
 .progress::after {
     content: "";
     position: absolute;
@@ -253,11 +303,27 @@ section {padding: 5rem 2rem;}
     animation: grow 2s ease forwards;
 }
 
-.html::after { width: 90%;}
-.css::after { width: 80%;}
-.js::after { width: 70%;}
-.go::after { width: 65%;}
-@keyframes grow { from { width: 0;}}
+.html::after {
+    width: 90%;
+}
+
+.css::after {
+    width: 80%;
+}
+
+.js::after {
+    width: 70%;
+}
+
+.go::after {
+    width: 65%;
+}
+
+@keyframes grow {
+    from {
+        width: 0;
+    }
+}
 
 /* Contact */
 
@@ -268,25 +334,26 @@ form {
     flex-direction: column;
     gap: 1rem;
 }
-form input, textarea {
+
+form input,
+textarea {
     padding: 0.8rem;
     border: none;
     border-radius: 8px;
     outline: none;
 }
+
 form button {
     border: none;
     cursor: pointer;
 }
+
 /* Footer */
 /* footer {
     text-align: center;
     padding: 1rem;
     background: #222;
 } */
-
-
-
 
 
 
@@ -300,11 +367,42 @@ form button {
     color: #00f6ff;
     font-weight: bold;
     transition: 0.3s;
-  }
-  
-  .btn:hover {
+}
+
+.btn:hover {
     background: #00f6ff;
     color: #111;
     box-shadow: 0 0 15px #00f6ff, 0 0 40px #00f6ff;
+}
+
+
+/* ------------------------------------------------- */
+
+
+/* Put this at the END of css/style.css */
+html, body {
+    height: 100%;
+    margin: 0;
   }
+  
+  body {
+    background: linear-gradient(-45deg, #1f1c2c, #928dab, #1f1c2c, #0f2027);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    -webkit-background-size: 400% 400%;
+    -webkit-animation: gradientBG 15s ease infinite;
+  }
+  
+  /* keyframes */
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  @-webkit-keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
   
