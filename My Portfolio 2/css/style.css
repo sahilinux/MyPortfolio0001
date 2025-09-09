@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+/* Background for homepage */
+.homepage-background {
+    position: fixed;            /* stick it behind everything */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  
+    background: url("../images/hero-bg.png") no-repeat center center;
+    background-size: cover;     /* adjust: contain / 100px etc. */
+    z-index: -1;                /* push behind text */
+  }
+  
 
 /* Reset */
 
@@ -201,7 +214,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+    background: url("../images/hero-bg4.png");
+    /* background: linear-gradient(135deg, #1a1a1a, #0d0d0d); */
     text-align: center;
     padding-top: 4rem;
 }
@@ -274,6 +288,7 @@ section {
 .skill-bars {
     max-width: 600px;
     margin: auto;
+    align-items: center;
 }
 
 .bar {
@@ -317,6 +332,9 @@ section {
 
 .go::after {
     width: 65%;
+}
+.java::after {
+    width: 40%;
 }
 
 @keyframes grow {
@@ -364,7 +382,7 @@ form button {
     padding: 10px 20px;
     border: 2px solid #00f6ff;
     border-radius: 25px;
-    color: #00f6ff;
+    color: #ffffff;
     font-weight: bold;
     transition: 0.3s;
 }
@@ -405,4 +423,6 @@ html, body {
     100% { background-position: 0% 50%; }
   }
 
-  
+  /* body {
+    background-image: url("../images/icon.png");
+  } */

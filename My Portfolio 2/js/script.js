@@ -2,7 +2,7 @@
 // Typing effect in hero section
 // ===============================
 const typingElement = document.querySelector(".typing");
-const texts = ["Web Developer", "Golang Learner", "Tech Enthusiast"];
+const texts = ["Web Developer", "Golang Developer", "Full-Stack Developer", "Tech Enthusiast"];
 let i = 0, j = 0, currentText = "";
 let isDeleting = false;
 let typingSpeed = 120;
